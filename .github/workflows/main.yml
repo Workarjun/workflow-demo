@@ -27,13 +27,13 @@ jobs:
 
     - name: Build & Push Docker Image
       run: |
-        docker build -t us-central1-docker.pkg.dev/healthy-highway-426311-i0/my-repo/my-app .
-        docker push us-central1-docker.pkg.dev/healthy-highway-426311-i0/my-repo/my-app
+        docker build -t us-central1-docker.pkg.dev/healthy-highway-426311-i0/test-cloud-run/riun-demo .
+        docker push us-central1-docker.pkg.dev/healthy-highway-426311-i0/test-cloud-run/run-demo
 
     - name: Deploy to Cloud Run
       run: |
         gcloud run deploy my-app \
-          --image=us-central1-docker.pkg.dev/healthy-highway-426311-i0/my-repo/my-app \
+          --image=us-central1-docker.pkg.dev/healthy-highway-426311-i0/test-cloud-run/run-demo \
           --platform=managed \
           --region=us-central1 \
           --allow-unauthenticated
