@@ -27,7 +27,7 @@ jobs:
 
     - name: Build & Push Docker Image
       run: |
-        docker build -t us-central1-docker.pkg.dev/healthy-highway-426311-i0/test-cloud-run/riun-demo .
+        docker build -t us-central1-docker.pkg.dev/healthy-highway-426311-i0/test-cloud-run/run-demo .
         docker push us-central1-docker.pkg.dev/healthy-highway-426311-i0/test-cloud-run/run-demo
 
     - name: Deploy to Cloud Run
